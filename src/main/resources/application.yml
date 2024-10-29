@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: backend-spring
+    formatted-version: (v1.0.0)
+    description: A Simple Backend Demo, using a some of the latest tools.
+
+jwt:
+  public:
+    key: app.pub
+  private:
+    key: app.key
