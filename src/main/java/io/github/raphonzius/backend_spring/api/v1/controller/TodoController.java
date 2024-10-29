@@ -6,20 +6,27 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.math.BigInteger;
 import java.util.List;
 
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("api")
+@RequestMapping("api/todo")
 @RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class TodoController {
 
     private final TodoRepository todoRepository;
 
-    @PostMapping("todo")
-    public List<Todo> fetchTodos(){
+    @GetMapping
+    public List<Todo> fetchAllTodos(){
         return todoRepository.findAll();
     }
+
+    @PostMapping("{userId}")
+    public List<Todo> fetchTodosByUser(BigInteger userId){
+        return todoRepository.findByUser_IdAndDoneFalseAndDeletedFalse(userId);
+    }
+
 
 }
