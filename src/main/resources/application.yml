@@ -2,10 +2,16 @@ spring:
   application:
     name: backend-spring
     formatted-version: (v1.0.0)
-    description: A Simple Backend Demo, using a some of the latest tools.
-
-jwt:
-  public:
-    key: app.pub
-  private:
-    key: app.key
+    description: A Simple Backend Demo
+  datasource:
+    url: jdbc:postgresql://postgres.cflbok8nvvfz.us-east-1.rds.amazonaws.com:5432
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: '<1qaz2wsx3edc>'
+  jpa:
+    postgres:
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true

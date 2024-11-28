@@ -21,7 +21,4 @@ public class User {
     @Column(name = "LOGIN", nullable = false)
     private String login;
 
-    @Column(name = "PASSWORD")
-    private String password;
-
 }

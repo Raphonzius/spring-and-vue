@@ -3,5 +3,5 @@ LABEL maintainer-name="Rafael Pereira"
 LABEL maintainer-email="rafael.informa@gmail.com"
 WORKDIR /app
 COPY target/*.jar /app/app.jar
-EXPOSE 25000
+EXPOSE 8080
 CMD java -jar app.jar

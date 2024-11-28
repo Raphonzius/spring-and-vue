@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigInteger;
-import java.time.LocalDateTime;
+import java.util.Date;
 
 @Getter
 @Setter
@@ -26,19 +26,18 @@ public class Todo {
     private String description;
 
     @ManyToOne
-    @JoinColumn(name = "USER_ID", referencedColumnName = "ID")
+    @JoinColumn(name = "USER_LOGIN", referencedColumnName = "LOGIN")
     private User user;
 
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "CREATE_DATE")
-    private LocalDateTime createDate;
+    private Date createDate;
 
+    @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "DUE_DATE")
-    private LocalDateTime dueDate;
+    private Date dueDate;
 
     @Column(name = "DONE")
     private boolean done;
-
-    @Column(name = "DELETED")
-    private boolean deleted;
 
 }

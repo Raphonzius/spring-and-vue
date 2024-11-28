@@ -1,0 +1,7 @@
+-- liquibase formatted sql
+
+-- changeset r.pereira:1730243249645-16
+INSERT INTO USER (ID, LOGIN, PASSWORD) VALUES (1, 'r.pereira', '$2a$12$60X9Mz2K7ou7UOVq.I9kc.fxd27MV096Hxv/aGP1KYIfHGaA73Yue');
+
+-- changeset r.pereira:1730243249645-17
+INSERT INTO USER_WHATSAPP (ID, USER_ID, API_KEY, PHONE) VALUES (1, 1, '7458449', '5511981237800');

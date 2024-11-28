@@ -1,0 +1,4 @@
+databaseChangeLog:
+  # Necessario realizar o includeAll de novos diretorios para detecção de seus changesets
+  - includeAll:
+      path: db/changelog/v1
