@@ -1,7 +1,14 @@
 -- liquibase formatted sql
 
--- changeset r.pereira:1730243249645-16
-INSERT INTO USER (ID, LOGIN, PASSWORD) VALUES (1, 'r.pereira', '$2a$12$60X9Mz2K7ou7UOVq.I9kc.fxd27MV096Hxv/aGP1KYIfHGaA73Yue');
+-- changeset r.pereira:1732830871065-9
+INSERT INTO USER (ID, LOGIN) VALUES (1, 'r.pereira');
 
--- changeset r.pereira:1730243249645-17
+-- changeset r.pereira:1732830871065-10
+INSERT INTO USER (ID, LOGIN) VALUES (2, 'g.dima');
+
+-- changeset r.pereira:1732830871065-11
 INSERT INTO USER_WHATSAPP (ID, USER_ID, API_KEY, PHONE) VALUES (1, 1, '7458449', '5511981237800');
+
+-- changeset r.pereira:1732830871065-12
+INSERT INTO SYSTEM_CONFIG (ID, CFG_PARAM, CFG_VALUE) VALUES (1, 'WPP_LAMBDA_URL', null);
+

@@ -7,7 +7,7 @@ spring:
     url: jdbc:postgresql://postgres.cflbok8nvvfz.us-east-1.rds.amazonaws.com:5432
     driver-class-name: org.postgresql.Driver
     username: postgres
-    password: '<1qaz2wsx3edc>'
+    password: Samsung10
   jpa:
     postgres:
       database-platform: org.hibernate.dialect.PostgreSQLDialect

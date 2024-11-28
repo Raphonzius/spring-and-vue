@@ -17,7 +17,7 @@ public class SystemConfig {
     @Column(name = "CFG_PARAM", unique = true, nullable = false)
     private String cfgParam;
 
-    @Column(name = "CFG_VALUE", nullable = false)
+    @Column(name = "CFG_VALUE")
     private String cfgValue;
 
 }
