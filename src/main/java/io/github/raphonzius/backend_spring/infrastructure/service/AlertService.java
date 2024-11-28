@@ -7,7 +7,6 @@ import io.github.raphonzius.backend_spring.infrastructure.repository.SystemConfi
 import io.github.raphonzius.backend_spring.infrastructure.repository.TodoRepository;
 import io.github.raphonzius.backend_spring.infrastructure.repository.UserWhatsappRepository;
 import lombok.RequiredArgsConstructor;
-import org.apache.commons.lang3.ObjectUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Service;
@@ -45,7 +44,7 @@ public class AlertService {
                 )
         );
 
-        if (ObjectUtils.isNotEmpty(todoList)) {
+        if (todoList != null) {
             for (Todo todo : todoList) {
                 UserWhatsapp whatsappData = userWhatsappRepository.findByUser_LoginIgnoreCase(todo.getUser().getLogin());
 

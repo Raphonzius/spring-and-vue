@@ -4,7 +4,7 @@ spring:
     formatted-version: (v1.0.0)
     description: A Simple Backend Demo
   datasource:
-    url: jdbc:postgresql://postgres.cflbok8nvvfz.us-east-1.rds.amazonaws.com:5432
+    url: jdbc:postgresql://postgres.cflbok8nvvfz.us-east-1.rds.amazonaws.com:5432/postgres
     driver-class-name: org.postgresql.Driver
     username: postgres
     password: Samsung10
